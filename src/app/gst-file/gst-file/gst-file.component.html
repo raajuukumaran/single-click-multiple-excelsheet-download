@@ -1,0 +1,751 @@
+<div class="animated fadeIn">
+    <div class="card">
+        <div class="card-header">
+            <i class="fa fa-align-justify" style="cursor: pointer;"></i> Gst-File
+            <a title="Download">
+                <span style="cursor: pointer;">
+                    <i class="fa fa-download" (click)="exportAsXLSX()"
+                        style="cursor: pointer; float: right; font-size: 1.2rem;">Download</i>
+                </span>
+            </a>
+            <a title="Downloaded-History">
+                <span style="cursor: pointer;">
+                    <i class="fa fa-history" routerLink="/gst/download-history"
+                        style="cursor: pointer; float: right; font-size: 1.2rem; margin-right: 10px;">History of Download<i>|</i>
+                        </i>
+                </span>
+            </a>
+        </div>
+        <div class="card-body">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="pills-existing-tab" data-bs-toggle="tab"
+                        data-bs-target="#pills-existing" role="tab" aria-controls="pills-existing" aria-selected="true">
+                        B2B,Sez,DE
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-b2ba-tab" data-bs-toggle="tab" data-bs-target="#pills-b2ba" role="tab"
+                        aria-controls="pills-b2ba" aria-selected="false">
+                        b2ba
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-new-tab" data-bs-toggle="tab" data-bs-target="#pills-new" role="tab"
+                        aria-controls="pills-new" aria-selected="false">
+                        b2cl
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-b2cla-tab" data-bs-toggle="tab" data-bs-target="#pills-b2cla"
+                        role="tab" aria-controls="pills-b2cla" aria-selected="false">
+                        b2cla
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-b2cs-tab" data-bs-toggle="tab" data-bs-target="#pills-b2cs" role="tab"
+                        aria-controls="pills-b2cs" aria-selected="false">
+                        b2cs
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-b2csa-tab" data-bs-toggle="tab" data-bs-target="#pills-b2csa"
+                        role="tab" aria-controls="pills-b2csa" aria-selected="false">
+                        b2csa
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-cdnr-tab" data-bs-toggle="tab" data-bs-target="#pills-cdnr" role="tab"
+                        aria-controls="pills-cdnr" aria-selected="false">
+                        cdnr
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-cdnra-tab" data-bs-toggle="tab" data-bs-target="#pills-cdnra"
+                        role="tab" aria-controls="pills-cdnra" aria-selected="false">
+                        cdnra
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-cdnur-tab" data-bs-toggle="tab" data-bs-target="#pills-cdnur"
+                        role="tab" aria-controls="pills-cdnur" aria-selected="false">
+                        cdnur
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-cdnura-tab" data-bs-toggle="tab" data-bs-target="#pills-cdnura"
+                        role="tab" aria-controls="pills-cdnura" aria-selected="false">
+                        cdnura
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-exp-tab" data-bs-toggle="tab" data-bs-target="#pills-exp" role="tab"
+                        aria-controls="pills-exp" aria-selected="false">
+                        exp
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-expa-tab" data-bs-toggle="tab" data-bs-target="#pills-expa" role="tab"
+                        aria-controls="pills-expa" aria-selected="false">
+                        expa
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-ar-tab" data-bs-toggle="tab" data-bs-target="#pills-ar" role="tab"
+                        aria-controls="pills-ar" aria-selected="false">
+                        Ar
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-ata-tab" data-bs-toggle="tab" data-bs-target="#pills-ata" role="tab"
+                        aria-controls="pills-ata" aria-selected="false">
+                        ata
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-atadj-tab" data-bs-toggle="tab" data-bs-target="#pills-atadj"
+                        role="tab" aria-controls="pills-atadj" aria-selected="false">
+                        atadj
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-atadja-tab" data-bs-toggle="tab" data-bs-target="#pills-atadja"
+                        role="tab" aria-controls="pills-atadja" aria-selected="false">
+                        atadja
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-hsn-tab" data-bs-toggle="tab" data-bs-target="#pills-hsn" role="tab"
+                        aria-controls="pills-hsn" aria-selected="false">
+                        hsn
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-docs-tab" data-bs-toggle="tab" data-bs-target="#pills-docs" role="tab"
+                        aria-controls="pills-docs" aria-selected="false">
+                        docs
+                    </a>
+                </li>
+
+            </ul>
+            <div class="table-responsive" style="overflow-x: auto; -webkit-overflow-scrolling:auto">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-existing" role="tabpanel"
+                        aria-labelledby="pills-existing-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>GSTIN/UIN of Recipient</th>
+                                    <th>Receiver Name</th>
+                                    <th>Invoice Number</th>
+                                    <th>Invoice Date</th>
+                                    <th>Invoice Value</th>
+                                    <th>Place of Supply</th>
+                                    <th>Reverse Charge</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Invoice Type</th>
+                                    <th>E-commerce GSTIN</th>
+                                    <th>Rate </th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let b2b of b2bDetails">
+                                    <td>{{ b2b.GSTIN_UIN_of_Recipient }}</td>
+                                    <td>{{ b2b.Receiver_Name }}</td>
+                                    <td>{{ b2b.Invoice_Number }}</td>
+                                    <td>{{ b2b.Invoice_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ b2b.Invoice_Value | number:'1.2-2' }}</td>
+                                    <td>{{ b2b.Place_of_Supply }}</td>
+                                    <td>{{ b2b.Reverse_Charge }}</td>
+                                    <td>{{ b2b.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ b2b.Invoice_Type }}</td>
+                                    <td>{{ b2b.Ecommerce_GSTIN }}</td>
+                                    <td>{{ b2b.Rate }}</td>
+                                    <td>{{ b2b.Taxable_Value | number:'1.2-2' }}</td>
+                                    <td>{{ b2b.Cess_Amount | number:'1.2-2' }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="pills-new" role="tabpanel" aria-labelledby="pills-new-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Invoice Number</th>
+                                    <th>Invoice Date</th>
+                                    <th>Invoice Value</th>
+                                    <th>Place of Supply</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                    <th>E-commerce GSTIN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let b2cl of b2clDetails">
+                                    <td>{{ b2cl.Invoice_Number }}</td>
+                                    <td>{{ b2cl.Invoice_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ b2cl.Invoice_Value }}</td>
+                                    <td>{{ b2cl.Place_of_Supply }}</td>
+                                    <td>{{ b2cl.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ b2cl.Rate }}</td>
+                                    <td>{{ b2cl.Taxable_Value }}</td>
+                                    <td>{{ b2cl.Cess_Amount }}</td>
+                                    <td>{{ b2cl.Ecommerce_GSTIN }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="pills-b2ba" role="tabpanel" aria-labelledby="pills-b2ba-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>GSTIN/UIN of Recipient</th>
+                                    <th>Receiver Name</th>
+                                    <th>Original Invoice Number</th>
+                                    <th>Original Invoice Date</th>
+                                    <th>Revised Invoice Number</th>
+                                    <th>Revised Invoice Date</th>
+                                    <th>Invoice Value</th>
+                                    <th>Place of Supply</th>
+                                    <th>Reverse Charge</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Invoice Type</th>
+                                    <th>E-commerce GSTIN</th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let b2ba of b2baDetails">
+                                    <td>{{ b2ba.GSTIN_UIN_of_Recipient }}</td>
+                                    <td>{{ b2ba.Receiver_Name }}</td>
+                                    <td>{{ b2ba.Original_Invoice_Number }}</td>
+                                    <td>{{ b2ba.Original_Invoice_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ b2ba.Revised_Invoice_Number }}</td>
+                                    <td>{{ b2ba.Revised_Invoice_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ b2ba.Invoice_Value }}</td>
+                                    <td>{{ b2ba.Place_of_Supply }}</td>
+                                    <td>{{ b2ba.Reverse_Charge }}</td>
+                                    <td>{{ b2ba.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ b2ba.Invoice_Type }}</td>
+                                    <td>{{ b2ba.Ecommerce_GSTIN }}</td>
+                                    <td>{{ b2ba.Taxable_Value }}</td>
+                                    <td>{{ b2ba.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+
+                    <div class="tab-pane fade" id="pills-b2cla" role="tabpanel" aria-labelledby="pills-b2cla-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Original Invoice Number</th>
+                                    <th>Original Invoice Date</th>
+                                    <th>Original Place of Supply</th>
+                                    <th>Revised Invoice Number</th>
+                                    <th>Revised Invoice Date</th>
+                                    <th>Invoice Value</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                    <th>E-commerce GSTIN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let b2cla of b2claDetails">
+                                    <td>{{ b2cla.Original_Invoice_Number }}</td>
+                                    <td>{{ b2cla.Original_Invoice_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ b2cla.Original_Place_of_Supply }}</td>
+                                    <td>{{ b2cla.Revised_Invoice_Number }}</td>
+                                    <td>{{ b2cla.Revised_Invoice_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ b2cla.Invoice_Value }}</td>
+                                    <td>{{ b2cla.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ b2cla.Rate }}</td>
+                                    <td>{{ b2cla.Taxable_Value }}</td>
+                                    <td>{{ b2cla.Cess_Amount }}</td>
+                                    <td>{{ b2cla.Ecommerce_GSTIN }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-b2cs" role="tabpanel" aria-labelledby="pills-b2cs-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Place Of Supply</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                    <th>E-commerce GSTIN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let b2cs of b2csDetails">
+                                    <td>{{ b2cs.Type }}</td>
+                                    <td>{{ b2cs.Place_of_Supply }}</td>
+                                    <td>{{ b2cs.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ b2cs.Rate }}</td>
+                                    <td>{{ b2cs.Taxable_Value | number:'1.2-2' }}</td>
+                                    <!-- Format with 2 decimal places -->
+                                    <td>{{ b2cs.Cess_Amount | number:'1.2-2' }}</td>
+                                    <!-- Format with 2 decimal places -->
+                                    <td>{{ b2cs.Ecommerce_GSTIN }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="pills-b2csa" role="tabpanel" aria-labelledby="pills-b2csa-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Financial Year</th>
+                                    <th>Original Month</th>
+                                    <th>Place of Supply</th>
+                                    <th>Type</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                    <th>E-commerce GSTIN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let b2csa of b2csaDetails">
+                                    <td>{{ b2csa.Financial_Year }}</td>
+                                    <td>{{ b2csa.Original_Month }}</td>
+                                    <td>{{ b2csa.Place_of_Supply }}</td>
+                                    <td>{{ b2csa.Type }}</td>
+                                    <td>{{ b2csa.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ b2csa.Rate }}</td>
+                                    <td>{{ b2csa.Taxable_Value }}</td>
+                                    <td>{{ b2csa.Cess_Amount }}</td>
+                                    <td>{{ b2csa.Ecommerce_GSTIN }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-cdnr" role="tabpanel" aria-labelledby="pills-cdnr-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>GSTIN/UIN of Recipient</th>
+                                    <th>Receiver Name</th>
+                                    <th>Note Number</th>
+                                    <th>Note Date</th>
+                                    <th>Note Type</th>
+                                    <th>Place of Supply</th>
+                                    <th>Reverse Charge</th>
+                                    <th>Note Supply Type</th>
+                                    <th>Note Value</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let cdnr of cdnrDetails">
+                                    <td>{{ cdnr.GSTIN_UIN_of_Recipient }}</td>
+                                    <td>{{ cdnr.Receiver_Name }}</td>
+                                    <td>{{ cdnr.Note_Number }}</td>
+                                    <td>{{ cdnr.Note_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ cdnr.Note_Type }}</td>
+                                    <td>{{ cdnr.Place_of_Supply }}</td>
+                                    <td>{{ cdnr.Reverse_Charge }}</td>
+                                    <td>{{ cdnr.Note_Supply_Type }}</td>
+                                    <td>{{ cdnr.Note_Value }}</td>
+                                    <td>{{ cdnr.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ cdnr.Rate }}</td>
+                                    <td>{{ cdnr.Taxable_Value }}</td>
+                                    <td>{{ cdnr.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-cdnra" role="tabpanel" aria-labelledby="pills-cdnra-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>GSTIN/UIN of Recipient</th>
+                                    <th>Receiver Name</th>
+                                    <th>Original Note Number</th>
+                                    <th>Original Note Date</th>
+                                    <th>Revised Note Number</th>
+                                    <th>Revised Note Date</th>
+                                    <th>Note Type</th>
+                                    <th>Place of Supply</th>
+                                    <th>Reverse Charge</th>
+                                    <th>Note Supply Type</th>
+                                    <th>Note Value</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let cdnra of cdnraDetails">
+                                    <td>{{ cdnra.GSTIN_UIN_of_Recipient }}</td>
+                                    <td>{{ cdnra.Receiver_Name }}</td>
+                                    <td>{{ cdnra.Original_Note_Number }}</td>
+                                    <td>{{ cdnra.Original_Note_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ cdnra.Revised_Note_Number }}</td>
+                                    <td>{{ cdnra.Revised_Note_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ cdnra.Note_Type }}</td>
+                                    <td>{{ cdnra.Place_of_Supply }}</td>
+                                    <td>{{ cdnra.Reverse_Charge }}</td>
+                                    <td>{{ cdnra.Note_Supply_Type }}</td>
+                                    <td>{{ cdnra.Note_Value }}</td>
+                                    <td>{{ cdnra.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ cdnra.Rate }}</td>
+                                    <td>{{ cdnra.Taxable_Value }}</td>
+                                    <td>{{ cdnra.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-cdnur" role="tabpanel" aria-labelledby="pills-cdnur-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>UR Type</th>
+                                    <th>Note Number</th>
+                                    <th>Note Date</th>
+                                    <th>Note Type</th>
+                                    <th>Place of Supply</th>
+                                    <th>Note Value</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let cdnur of cdnurDetails">
+                                    <td>{{ cdnur.UR_Type }}</td>
+                                    <td>{{ cdnur.Note_Number }}</td>
+                                    <td>{{ cdnur.Note_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ cdnur.Note_Type }}</td>
+                                    <td>{{ cdnur.Place_of_Supply }}</td>
+                                    <td>{{ cdnur.Note_Value }}</td>
+                                    <td>{{ cdnur.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ cdnur.Rate }}</td>
+                                    <td>{{ cdnur.Taxable_Value }}</td>
+                                    <td>{{ cdnur.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-cdnura" role="tabpanel" aria-labelledby="pills-cdnura-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>UR Type</th>
+                                    <th>Original Note Number</th>
+                                    <th>Original Note Date</th>
+                                    <th>Revised Note Number</th>
+                                    <th>Revised Note Date</th>
+                                    <th>Note Type</th>
+                                    <th>Place of Supply</th>
+                                    <th>Note Value</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let cdnura of cdnuraDetails">
+                                    <td>{{ cdnura.UR_Type }}</td>
+                                    <td>{{ cdnura.Original_Note_Number }}</td>
+                                    <td>{{ cdnura.Original_Note_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ cdnura.Revised_Note_Number }}</td>
+                                    <td>{{ cdnura.Revised_Note_Date }}</td>
+                                    <td>{{ cdnura.Note_Type }}</td>
+                                    <td>{{ cdnura.Place_of_Supply }}</td>
+                                    <td>{{ cdnura.Note_Value }}</td>
+                                    <td>{{ cdnura.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ cdnura.Rate }}</td>
+                                    <td>{{ cdnura.Taxable_Value }}</td>
+                                    <td>{{ cdnura.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-exp" role="tabpanel" aria-labelledby="pills-exp-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Export Type</th>
+                                    <th>Invoice Number</th>
+                                    <th>Invoice Date</th>
+                                    <th>Invoice Value</th>
+                                    <th>Port Code</th>
+                                    <th>Shipping Bill Number</th>
+                                    <th>Shipping Bill Date</th>
+                                    <th>Rate</th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let exp of expDetails">
+                                    <td>{{ exp.Export_Type }}</td>
+                                    <td>{{ exp.Invoice_Number }}</td>
+                                    <td>{{ exp.Invoice_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ exp.Invoice_Value }}</td>
+                                    <td>{{ exp.Port_Code }}</td>
+                                    <td>{{ exp.Shipping_Bill_Number }}</td>
+                                    <td>{{ exp.Shipping_Bill_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ exp.Rate }}</td>
+                                    <td>{{ exp.Taxable_Value }}</td>
+                                    <td>{{ exp.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-expa" role="tabpanel" aria-labelledby="pills-expa-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Export Type</th>
+                                    <th>Original Invoice Number</th>
+                                    <th>Original Invoice Date</th>
+                                    <th>Revised Invoice Number</th>
+                                    <th>Revised Invoice Date</th>
+                                    <th>Invoice Value</th>
+                                    <th>Port Code</th>
+                                    <th>Shipping Bill Number</th>
+                                    <th>Shipping Bill Date</th>
+                                    <th>Rate</th>
+                                    <th>Taxable Value</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let expa of expaDetails">
+                                    <td>{{ expa.Export_Type }}</td>
+                                    <td>{{ expa.Original_Invoice_Number }}</td>
+                                    <td>{{ expa.Original_Invoice_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ expa.Revised_Invoice_Number }}</td>
+                                    <td>{{ expa.Revised_Invoice_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ expa.Invoice_Value }}</td>
+                                    <td>{{ expa.Port_Code }}</td>
+                                    <td>{{ expa.Shipping_Bill_Number }}</td>
+                                    <td>{{ expa.Shipping_Bill_Date | date: 'dd-MMM-yyyy' }}</td>
+                                    <td>{{ expa.Rate }}</td>
+                                    <td>{{ expa.Taxable_Value }}</td>
+                                    <td>{{ expa.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-ar" role="tabpanel" aria-labelledby="pills-ar-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Place of Supply</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Gross Advance Received</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let ar of arDetails">
+                                    <td>{{ ar.Place_of_Supply }}</td>
+                                    <td>{{ ar.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ ar.Rate }}</td>
+                                    <td>{{ ar.Gross_Advance_Received }}</td>
+                                    <td>{{ ar.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-ata" role="tabpanel" aria-labelledby="pills-ata-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Financial Year</th>
+                                    <th>Original Month</th>
+                                    <th>Original Place of Supply</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Gross Advance Received</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let ata of ataDetails">
+                                    <td>{{ ata.Financial_Year }}</td>
+                                    <td>{{ ata.Original_Month }}</td>
+                                    <td>{{ ata.Original_Place_of_Supply }}</td>
+                                    <td>{{ ata.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ ata.Rate }}</td>
+                                    <td>{{ ata.Gross_Advance_Received }}</td>
+                                    <td>{{ ata.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-atadj" role="tabpanel" aria-labelledby="pills-atadj-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Place of Supply</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Gross Advance Adjusted</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let atadj of atadjDetails">
+                                    <td>{{ atadj.Place_of_Supply }}</td>
+                                    <td>{{ atadj.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ atadj.Rate }}</td>
+                                    <td>{{ atadj.Gross_Advance_Adjusted }}</td>
+                                    <td>{{ atadj.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-atadja" role="tabpanel" aria-labelledby="pills-atadja-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Financial Year</th>
+                                    <th>Original Month</th>
+                                    <th>Original Place of Supply</th>
+                                    <th>Applicable % of Tax Rate</th>
+                                    <th>Rate</th>
+                                    <th>Gross Advance Adjusted</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let atadja of atadjaDetails">
+                                    <td>{{ atadja.Financial_Year }}</td>
+                                    <td>{{ atadja.Original_Month }}</td>
+                                    <td>{{ atadja.Original_Place_of_Supply }}</td>
+                                    <td>{{ atadja.Applicable_Percent_of_Tax_Rate }}</td>
+                                    <td>{{ atadja.Rate }}</td>
+                                    <td>{{ atadja.Gross_Advance_Adjusted }}</td>
+                                    <td>{{ atadja.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="pills-hsn" role="tabpanel" aria-labelledby="pills-hsn-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>HSN</th>
+                                    <th>Description</th>
+                                    <th>UQC</th>
+                                    <th>Total Quantity</th>
+                                    <th>Total Value</th>
+                                    <th>Rate</th>
+                                    <th>Taxable Value</th>
+                                    <th>Integrated Tax Amount</th>
+                                    <th>Central Tax Amount</th>
+                                    <th>State/UT Tax Amount</th>
+                                    <th>Cess Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let hsn of hsnDetails">
+                                    <td>{{ hsn.HSN }}</td>
+                                    <td>{{ hsn.Description }}</td>
+                                    <td>{{ hsn.UQC }}</td>
+                                    <td>{{ hsn.Total_Quantity }}</td>
+                                    <td>{{ hsn.Total_Value }}</td>
+                                    <td>{{ hsn.Rate }}</td>
+                                    <td>{{ hsn.Taxable_Value }}</td>
+                                    <td>{{ hsn.Integrated_Tax_Amount }}</td>
+                                    <td>{{ hsn.Central_Tax_Amount }}</td>
+                                    <td>{{ hsn.State_UT_Tax_Amount }}</td>
+                                    <td>{{ hsn.Cess_Amount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-docs" role="tabpanel" aria-labelledby="pills-docs-tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Nature of Document</th>
+                                    <th>Sr.No.From</th>
+                                    <th>Sr.No.To</th>
+                                    <th>Total Number</th>
+                                    <th>Cancelled</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let docs of docsDetails">
+                                    <td>{{ docs.Nature_of_Document }}</td>
+                                    <td>{{ docs.Sr_No_From }}</td>
+                                    <td>{{ docs.Sr_No_To }}</td>
+                                    <td>{{ docs.Total_Number }}</td>
+                                    <td>{{ docs.Cancelled }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
